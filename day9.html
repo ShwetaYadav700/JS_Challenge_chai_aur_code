@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 09</title>
+</head>
+<body>
+    <div class="change">Hello !!!</div>
+    <ul id="myList">
+      <li>Apple</li>
+      <li>Orange</li>
+    </ul>
+    <img src="" alt="this is demo" class="image">
+    <button class="btn">Heloo</button>
+
+    <script>
+        //task 1
+        const div = document.querySelector('.change');
+        div.textContent = "Hii!!!";
+
+        //task 2
+        div.style.backgroundColor = 'blue';
+        div.style.color = 'white';
+
+        //task 3
+        const box = document.createElement('div');
+        box.textContent="This is task 3";
+        document.body.append(box);
+
+        //task 4
+        const node = document.createElement('li');
+        const textNode =document.createTextNode("Mango");
+        node.appendChild(textNode);
+        document.getElementById('myList').appendChild(node);
+
+        //task 5
+        node.remove();
+        
+       //task 6
+       const myList = document.getElementById('myList');
+       myList.removeChild(myList.firstElementChild);
+
+       //task 7
+       const img = document.querySelector(".image");
+       img.setAttribute("alt","newimage");
+
+       //task 8
+       
+
+       //task 9
+       const btn = document.querySelector('.btn');
+       btn.addEventListener('click',()=>{
+        const greet = document.createElement('p');
+        greet.textContent = "Helloo bcchoooo!!";
+        document.body.append(greet);
+       })
+
+       //task 10
+       btn.addEventListener("mouseover",(event)=>{
+        event.target.style.color = "purple";
+       });
+    </script>
+</body>
+</html>
